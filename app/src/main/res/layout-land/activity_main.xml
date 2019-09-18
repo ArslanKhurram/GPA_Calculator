@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_grade1"
+            style="@style/TextView_Style_Landscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grade1"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_grade2"
+            style="@style/TextView_Style_Landscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grade2"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grade1" />
+
+        <TextView
+            android:id="@+id/tv_grade3"
+            style="@style/TextView_Style_Landscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grade3"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grade2" />
+
+        <TextView
+            android:id="@+id/tv_grade4"
+            style="@style/TextView_Style_Landscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grade4"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grade3" />
+
+        <TextView
+            android:id="@+id/tv_grade5"
+            style="@style/TextView_Style_Landscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grade5"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grade4" />
+
+        <EditText
+            android:id="@+id/et_Grade1"
+            style="@style/EditText_Style_Landscape"
+            android:layout_width="171dp"
+            android:layout_height="39dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/tv_grade1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="resetLayout"/>
+
+        <EditText
+            android:id="@+id/et_Grade2"
+            style="@style/EditText_Style_Landscape"
+            android:layout_width="171dp"
+            android:layout_height="39dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/tv_grade2"
+            app:layout_constraintTop_toBottomOf="@id/et_Grade1"
+            android:onClick="resetLayout"/>
+
+        <EditText
+            android:id="@+id/et_Grade3"
+            style="@style/EditText_Style_Landscape"
+            android:layout_width="171dp"
+            android:layout_height="39dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/tv_grade3"
+            app:layout_constraintTop_toBottomOf="@id/et_Grade2"
+            android:onClick="resetLayout"/>
+
+        <EditText
+            android:id="@+id/et_Grade4"
+            style="@style/EditText_Style_Landscape"
+            android:layout_width="171dp"
+            android:layout_height="39dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/tv_grade4"
+            app:layout_constraintTop_toBottomOf="@id/et_Grade3"
+            android:onClick="resetLayout"/>
+
+        <EditText
+            android:id="@+id/et_Grade5"
+            style="@style/EditText_Style_Landscape"
+            android:layout_width="171dp"
+            android:layout_height="39dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/tv_grade5"
+            app:layout_constraintTop_toBottomOf="@id/et_Grade4"
+            android:onClick="resetLayout"/>
+
+        <Button
+            android:id="@+id/btn_computeGPA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:onClick="computeGPA"
+            android:text="@string/btn_Calc_GPA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/et_Grade2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/finalGPA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text=""
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/et_Grade4"
+            app:layout_constraintTop_toBottomOf="@id/btn_computeGPA" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
